@@ -20,6 +20,7 @@ namespace ConsolePizza
 
         public void SetMembers(List<Employee> employees)
         {
+            this.Members.Clear();
             foreach (Employee i in employees)
             {
                 if (i.ID != this.ID)
