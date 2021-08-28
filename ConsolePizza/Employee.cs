@@ -25,9 +25,12 @@ namespace ConsolePizza
             {
                 if (i.ID != this.ID)
                 {
+                    List<long> stackID = new();
                     Employee emp = i;
                     while (emp is not null && 0 < emp.Boss)
                     {
+                        if (stackID.Contains(emp.ID)) break; // 無限ループ回避
+                        stackID.Add(emp.ID);
                         if (emp.Boss == this.ID)
                         {
                             this.Members.Add(i.ID);
