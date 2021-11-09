@@ -23,6 +23,8 @@ namespace ConsolePizza
             }
             empList.ForEach(e => e.SetMembers(empList));
             empList.ForEach(e => Console.WriteLine(e.Members.Count.ToString()));
+
+            Console.ReadKey();
         }
     }
 }
